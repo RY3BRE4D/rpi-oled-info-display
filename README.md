@@ -96,7 +96,6 @@ Note: This project depends on external libraries such as:
 - [Luma.Core](https://github.com/rm-hull/luma.core)
 - [Pillow](https://python-pillow.org/)
 - [psutil](https://github.com/giampaolo/psutil)
-- [requests](https://github.com/psf/requests)
 - [RPi.GPIO](https://sourceforge.net/p/raspberry-gpio-python/)
 
 Each of these libraries is distributed under its own license. Refer to their individual repositories for license details.
