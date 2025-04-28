@@ -39,8 +39,8 @@ Follow these steps to install and run the project.
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/RPiInfoDisplay.git
-   cd RPiInfoDisplay
+   git clone https://github.com/RY3BRE4D/rpi-oled-info-display.git
+   cd rpi-oled-info-display
    ```
 
 2. **Create and activate a virtual environment:**
@@ -65,21 +65,32 @@ Follow these steps to install and run the project.
 
 Follow these steps to create a service that activates the venv
 and starts the Python program at boot
+1. **Edit info_oled.serivce to include the correct path:**
+   open the service file with nano or any text editor:
+   ```bash
+   nano info_oled.service
+   ```
 
-1. **Copy info_oled.service from project directory to systemd:**
+   Specifically, edit these two lines in the file:
+   ```ini
+   ExecStart=/bin/bash -c 'source /home/pi/rpi-oled-info-display/venv/bin/activate && python /home/pi/rpi-oled-info-display/main.py'
+   WorkingDirectory=/home/pi/rpi-oled-info-display
+   ```
+
+2. **Copy info_oled.service from project directory to systemd:**
    ```bash
    sudo cp info_oled.service /etc/systemd/system/
    ```
 
-2. **Reload systemd to recognize the new service:**
+3. **Reload systemd to recognize the new service:**
    ```bash
    sudo systemctl daemon-reexec
    ```
-3. **Enable the service to start at boot:**
+4. **Enable the service to start at boot:**
    ```bash
    sudo systemctl enable info_oled.service
    ```
-4. **Optionally start or check status of service:**
+5. **Optionally start or check status of service:**
    ```bash
    sudo systemctl start info_oled.service
    sudo systemctl status info_oled.service
