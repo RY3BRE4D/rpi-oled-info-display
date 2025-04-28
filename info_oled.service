@@ -1,0 +1,14 @@
+[Unit]
+Description=Useful Information Displayed on OLED
+After=network.target
+
+[Service]
+ExecStart=/bin/bash -c 'source /home/piFour/PyProjects/RPiInfoDisplay/venv/bin/activate && python /home/piFour/PyProjects/RPiInfoDisplay/main.py'
+WorkingDirectory=/home/piFour/PyProjects/RPiInfoDisplay
+StandardOutput=null
+StandardError=null
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
