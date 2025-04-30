@@ -3,8 +3,8 @@ Description=Useful Information Displayed on OLED
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c 'source /home/piFour/PyProjects/RPiInfoDisplay/venv/bin/activate && python /home/piFour/PyProjects/RPiInfoDisplay/main.py'
-WorkingDirectory=/home/piFour/PyProjects/RPiInfoDisplay
+ExecStart=/bin/bash -c 'source /home/pi/rpi-oled-info-display/venv/bin/activate && python /home/pi/rpi-oled-info-display/main.py'
+WorkingDirectory=/home/pi/rpi-oled-info-display
 StandardOutput=null
 StandardError=null
 Restart=always
