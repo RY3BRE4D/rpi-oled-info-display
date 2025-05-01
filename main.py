@@ -1,6 +1,6 @@
 """
-Package Name: slotMachine
-Description: Slot Machine Game Logic
+Package Name: Raspberry Pi OLED Info Display
+Description: Shows Useful Information On An OLED Display
 Author: Ryan Frost
 Version: 1.0.0
 License: MIT
