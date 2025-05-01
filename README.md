@@ -33,6 +33,16 @@ The Python script is launched automatically at boot using `systemd`, and runs in
 
 ---
 
+## Hardware Setup
+
+Hooking up the SSD1306 OLED is a breeze. Just four wires!
+GND → Pin 6 (GND)
+VCC → Pin 1 (3.3V or 5V)
+SCL → Pin 5 (GPIO3 / SCL)
+SDA → Pin 3 (GPIO2 / SDA)
+
+---
+
 ## Installation
 
 Follow these steps to install and run the project.
