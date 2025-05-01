@@ -13,6 +13,7 @@ The Python script is launched automatically at boot using `systemd`, and runs in
 
 ---
 
+
 ## Features
 
 - SSD1306 OLED display support via the [Luma.OLED](https://github.com/rm-hull/luma.oled) library
@@ -21,6 +22,7 @@ The Python script is launched automatically at boot using `systemd`, and runs in
 - Modular design for easy future feature additions
 
 ---
+
 
 ## Requirements
 
@@ -33,15 +35,20 @@ The Python script is launched automatically at boot using `systemd`, and runs in
 
 ---
 
+
 ## Hardware Setup
 
 Hooking up the SSD1306 OLED is a breeze. Just four wires!
-GND → Pin 6 (GND)
-VCC → Pin 1 (3.3V or 5V)
-SCL → Pin 5 (GPIO3 / SCL)
-SDA → Pin 3 (GPIO2 / SDA)
+
+| SSD1306 Pin | Raspberry Pi Pin | Function        |
+|-------------|------------------|-----------------|
+| GND         | Pin 6            | Ground (GND)    |
+| VCC         | Pin 1            | 3.3V or 5V Power|
+| SCL         | Pin 5            | GPIO3 / I2C SCL |
+| SDA         | Pin 3            | GPIO2 / I2C SDA |
 
 ---
+
 
 ## Installation
 
@@ -68,8 +75,8 @@ Follow these steps to install and run the project.
    ```bash
    python3 main.py
    ```
-
 ---
+
 
 ## Creating a Service That Runs The Script At Boot
 
@@ -105,8 +112,8 @@ and starts the Python program at boot
    sudo systemctl start info_oled.service
    sudo systemctl status info_oled.service
    ```
-
 ---
+
 
 ## License
 
